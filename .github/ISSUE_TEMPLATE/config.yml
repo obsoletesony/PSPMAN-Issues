@@ -1,11 +1,11 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Read the PSPMAN bug-report guide
+  - name: Bug-report guide
     url: https://www.obsoletesony.com/pspman/report-a-bug
-    about: Learn where the diagnostic log is stored and what information helps.
-  - name: Open the PSPMAN User's Guide
+    about: Find the diagnostic log and see what to include.
+  - name: PSPMAN User's Guide
     url: https://www.obsoletesony.com/downloads/PSPMAN-User-Guide.pdf
     about: Installation, controls, supported files, and troubleshooting.
-  - name: Report a security or privacy concern privately
+  - name: Security or privacy issue
     url: https://github.com/obsoletesony/PSPMAN-Issues/security/policy
-    about: Do not disclose sensitive security or privacy information in a public issue.
+    about: Use this for anything that should not be posted publicly.
