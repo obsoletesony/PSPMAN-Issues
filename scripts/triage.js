@@ -205,21 +205,21 @@ async function acknowledgeIssue({ github, context, issue, labels }) {
   let message;
   if (japanese) {
     message = `${ACK_MARKER}
-報告ありがとうございます。内容を受け付けました。追加の確認が必要な場合は、この Issue で質問します。`;
+報告ありがとうございます。確認します。追加情報が必要な場合は、この Issue でお聞きします。`;
 
     if (!logAttached) {
       message += `
 
-診断ログを後から追加する場合は、\`PSPMAN-HW-DIAG.log\` をコメントに添付してください。音楽ファイルはアップロードしないでください。`;
+あとで診断ログが見つかった場合は、\`PSPMAN-HW-DIAG.log\` をコメントに添付してください。音楽ファイルはアップロードしないでください。`;
     }
   } else {
     message = `${ACK_MARKER}
-Thanks for the report. It has been received and classified for review. A maintainer may ask follow-up questions here.`;
+Thanks. We got the report and will take a look. If we need anything else, we'll ask here.`;
 
     if (!logAttached) {
       message += `
 
-If you find the diagnostic log later, attach \`PSPMAN-HW-DIAG.log\` in a comment. Please do not upload the music file.`;
+If you find \`PSPMAN-HW-DIAG.log\` later, attach it in a comment. Don't upload the music file.`;
     }
   }
 
