@@ -1,0 +1,162 @@
+[
+  {
+    "name": "type: bug",
+    "color": "D73A4A",
+    "description": "Something in PSPMAN is not working as expected"
+  },
+  {
+    "name": "type: compatibility",
+    "color": "0E8A16",
+    "description": "Hardware, firmware, or emulator compatibility result"
+  },
+  {
+    "name": "type: help",
+    "color": "0075CA",
+    "description": "A user needs help or is unsure whether something is a bug"
+  },
+  {
+    "name": "type: feature",
+    "color": "A2EEEF",
+    "description": "Feature or usability suggestion"
+  },
+  {
+    "name": "status: needs triage",
+    "color": "FBCA04",
+    "description": "New report awaiting initial review"
+  },
+  {
+    "name": "status: needs information",
+    "color": "D4C5F9",
+    "description": "More information is needed from the reporter"
+  },
+  {
+    "name": "status: investigating",
+    "color": "BFDADC",
+    "description": "The report is being investigated"
+  },
+  {
+    "name": "status: confirmed",
+    "color": "B60205",
+    "description": "The reported behavior has been reproduced or confirmed"
+  },
+  {
+    "name": "status: fixed",
+    "color": "0E8A16",
+    "description": "A fix has been completed"
+  },
+  {
+    "name": "status: cannot reproduce",
+    "color": "EDEDED",
+    "description": "The behavior could not be reproduced with current information"
+  },
+  {
+    "name": "area: startup",
+    "color": "F9D0C4",
+    "description": "Installation, launch, startup scan, or cache"
+  },
+  {
+    "name": "area: library",
+    "color": "C5DEF5",
+    "description": "Library scan, browsing, sorting, or search"
+  },
+  {
+    "name": "area: playback",
+    "color": "5319E7",
+    "description": "Audio decoding, output, transitions, or transport"
+  },
+  {
+    "name": "area: artwork",
+    "color": "F7C6C7",
+    "description": "Album artwork or image loading"
+  },
+  {
+    "name": "area: queue",
+    "color": "C2E0C6",
+    "description": "Queue, playlists, or favorites"
+  },
+  {
+    "name": "area: interface",
+    "color": "BFD4F2",
+    "description": "Controls, navigation, or visual presentation"
+  },
+  {
+    "name": "area: performance",
+    "color": "FEF2C0",
+    "description": "Slowdown, latency, or responsiveness"
+  },
+  {
+    "name": "area: shutdown",
+    "color": "D4C5F9",
+    "description": "Closing PSPMAN or returning to the XMB"
+  },
+  {
+    "name": "area: other",
+    "color": "EDEDED",
+    "description": "Problem area is unknown or outside current categories"
+  },
+  {
+    "name": "model: PSP-1000",
+    "color": "E99695",
+    "description": "Report involves a PSP-1000"
+  },
+  {
+    "name": "model: PSP-2000",
+    "color": "E99695",
+    "description": "Report involves a PSP-2000"
+  },
+  {
+    "name": "model: PSP-3000",
+    "color": "E99695",
+    "description": "Report involves a PSP-3000"
+  },
+  {
+    "name": "model: PSP Go",
+    "color": "E99695",
+    "description": "Report involves a PSP Go"
+  },
+  {
+    "name": "model: PSP Street",
+    "color": "E99695",
+    "description": "Report involves a PSP Street"
+  },
+  {
+    "name": "model: emulator",
+    "color": "E99695",
+    "description": "Report involves PPSSPP or another emulator"
+  },
+  {
+    "name": "model: unknown",
+    "color": "EDEDED",
+    "description": "PSP model was not identified"
+  },
+  {
+    "name": "log: attached",
+    "color": "0E8A16",
+    "description": "A diagnostic log is attached"
+  },
+  {
+    "name": "log: missing",
+    "color": "FBCA04",
+    "description": "No diagnostic log was attached"
+  },
+  {
+    "name": "log: unavailable",
+    "color": "D4C5F9",
+    "description": "The log could not be found, created, or preserved"
+  },
+  {
+    "name": "log: private",
+    "color": "C5DEF5",
+    "description": "The reporter chose not to publish the log"
+  },
+  {
+    "name": "log: not applicable",
+    "color": "EDEDED",
+    "description": "A diagnostic log is not relevant"
+  },
+  {
+    "name": "language: japanese",
+    "color": "F9D0C4",
+    "description": "The report is written in Japanese"
+  }
+]
