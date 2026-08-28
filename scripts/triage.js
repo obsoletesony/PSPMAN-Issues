@@ -155,7 +155,10 @@ function classifyIssue(issue) {
   const title = issue.title || "";
   const body = issue.body || "";
   const existing = issueLabelNames(issue);
-  const issueType = classifyType(title);
+  const issueType =
+    classifyType(title) ||
+    existing.find((label) => label.startsWith("type:")) ||
+    null;
 
   const desired = new Set();
   if (issueType) desired.add(issueType);
