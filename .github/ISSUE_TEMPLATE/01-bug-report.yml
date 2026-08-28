@@ -1,5 +1,5 @@
-name: Report a PSPMAN problem
-description: Report a crash, freeze, playback problem, missing artwork, control problem, or other unexpected behavior.
+name: Report a PSPMAN bug
+description: Crash, freeze, playback, artwork, controls, or anything else that broke.
 title: "[Bug] "
 labels:
   - "type: bug"
@@ -8,17 +8,17 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for helping test PSPMAN.
+        Thanks for testing PSPMAN.
 
-        **No technical experience is required.** Give us what you know and write **“I don't know”** where you are unsure.
+        Fill in what you know. If you do not know a model, firmware, or version detail, write **“I don't know.”**
 
-        This report and every attachment will be public. Do not upload copyrighted music. PSPMAN does not send diagnostic information automatically.
+        Issues and attachments are public. Do not upload music files. PSPMAN does not send diagnostic data anywhere by itself.
 
   - type: dropdown
     id: psp-model
     attributes:
       label: PSP model
-      description: Choose the closest match. The model family is enough if you do not know the exact regional number.
+      description: The model family is enough if you do not know the full regional number.
       options:
         - PSP-1000
         - PSP-2000
@@ -35,7 +35,7 @@ body:
     id: exact-model
     attributes:
       label: Exact model number
-      description: Optional. This is printed on the PSP, for example PSP-2001 or PSP-3004.
+      description: Optional. Printed on the PSP, for example PSP-2001 or PSP-3004.
       placeholder: PSP-2001, or I don't know
     validations:
       required: false
@@ -44,7 +44,7 @@ body:
     id: firmware
     attributes:
       label: System software or custom firmware
-      description: Include both when possible.
+      description: Include both if you know them.
       placeholder: 6.61 ARK-4, 6.60 PRO-C2, 5.00 M33-4, official 6.61, or I don't know
     validations:
       required: true
@@ -53,7 +53,7 @@ body:
     id: pspman-version
     attributes:
       label: PSPMAN version
-      description: You can find this in PSPMAN's About screen. Write “I don't know” if you cannot open it.
+      description: Shown in About. If PSPMAN will not open, write “I don't know.”
       placeholder: Public Alpha version shown in About
     validations:
       required: true
@@ -84,7 +84,7 @@ body:
     id: what-happened
     attributes:
       label: What happened?
-      description: Describe what you saw or heard. Plain language is fine.
+      description: What did you see or hear?
       placeholder: PSPMAN opened normally. I selected a song, the cover appeared, and then...
     validations:
       required: true
@@ -93,7 +93,7 @@ body:
     id: expected
     attributes:
       label: What did you expect?
-      description: Optional. Tell us what you expected PSPMAN to do instead.
+      description: Optional.
       placeholder: I expected the next song to begin.
     validations:
       required: false
@@ -102,7 +102,7 @@ body:
     id: steps
     attributes:
       label: Steps to reproduce
-      description: List what you did before the problem. Tell us what you remember even if you cannot reproduce it.
+      description: What did you do right before it happened? If it only happened once, list what you remember.
       placeholder: |
         1. Opened PSPMAN
         2. Opened All Songs
@@ -129,7 +129,7 @@ body:
     id: playback-result
     attributes:
       label: What happened to the song?
-      description: Choose “Not applicable” for installation, navigation, or non-playback problems.
+      description: Use “Not applicable” if the bug was not about playback.
       options:
         - It played normally
         - It did not start
@@ -146,7 +146,7 @@ body:
     id: cover-result
     attributes:
       label: What happened to the cover?
-      description: Choose “Not applicable” when artwork is unrelated.
+      description: Use “Not applicable” if artwork was not involved.
       options:
         - It appeared normally
         - It did not appear
@@ -162,11 +162,11 @@ body:
       value: |
         ### Diagnostic log
 
-        The file is named **`PSPMAN-HW-DIAG.log`**. Open the Memory Stick on a computer and look at its top level, beside the **`PSP`** folder.
+        Look for **`PSPMAN-HW-DIAG.log`** in the root of the Memory Stick, next to the **`PSP`** folder.
 
-        **Copy it before starting PSPMAN again. The next launch replaces the previous log.**
+        **Copy it before opening PSPMAN again. The next launch replaces it.**
 
-        Reports are public. Review the log before uploading it because it may contain song names, file names, or paths.
+        The issue is public, so check the log before uploading it. It can contain song names, file names, and paths.
 
   - type: dropdown
     id: log-status
@@ -187,7 +187,7 @@ body:
     id: diagnostic-log
     attributes:
       label: Attach PSPMAN-HW-DIAG.log
-      description: Strongly recommended, but not required. Upload only the .log file, not your music or Memory Stick contents.
+      description: If you have it, attach the .log here. Do not upload music or the whole Memory Stick.
     validations:
       required: false
       accept: ".log,.txt"
@@ -196,7 +196,7 @@ body:
     id: affected-file
     attributes:
       label: Affected song or cover details
-      description: Optional. Do not upload the music file. Include whatever you know.
+      description: Optional. Do not upload the song itself.
       placeholder: |
         Artist and song:
         FLAC file size:
@@ -211,7 +211,7 @@ body:
     id: media
     attributes:
       label: Photo, screenshot, or short video
-      description: Optional. A photo of the PSP screen can be useful when the exact error is difficult to describe.
+      description: Optional. A phone photo of the PSP screen is fine.
     validations:
       required: false
       accept: ".png,.jpg,.jpeg,.gif,.webp,.mp4,.mov,.webm"
@@ -220,18 +220,18 @@ body:
     id: additional-context
     attributes:
       label: Anything else
-      description: Optional. Add any detail that may help, including whether the same file works in another player.
+      description: Anything else that might matter.
     validations:
       required: false
 
   - type: checkboxes
     id: public-confirmation
     attributes:
-      label: Public report confirmation
+      label: Before submitting
       options:
-        - label: I understand that this report and any files I attach are public.
+        - label: I understand that this issue and its attachments are public.
           required: true
-        - label: I reviewed anything I chose to attach and removed information I do not want to publish.
+        - label: I checked anything I attached for information I do not want public.
           required: true
         - label: I did not upload copyrighted music.
           required: true
