@@ -1,0 +1,238 @@
+name: PSPMAN の問題を日本語で報告する
+description: クラッシュ、フリーズ、再生、ジャケット画像、操作などの不具合を日本語で報告します。
+title: "[不具合] "
+labels:
+  - "type: bug"
+  - "status: needs triage"
+  - "language: japanese"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        PSPMAN のテストにご協力いただきありがとうございます。
+
+        **専門知識は必要ありません。** 分かる範囲で入力し、不明な項目には **「分かりません」** と書いてください。
+
+        この報告と添付ファイルはすべて公開されます。著作権で保護された音楽ファイルはアップロードしないでください。PSPMAN が診断情報を自動送信することはありません。
+
+  - type: dropdown
+    id: psp-model
+    attributes:
+      label: PSP のモデル
+      description: 正確な地域別型番が分からない場合は、シリーズだけで構いません。
+      options:
+        - PSP-1000
+        - PSP-2000
+        - PSP-3000
+        - PSP Go (PSP-N1000)
+        - PSP Street (PSP-E1000)
+        - PPSSPP またはその他のエミュレーター
+        - その他
+        - 分かりません
+    validations:
+      required: true
+
+  - type: input
+    id: exact-model
+    attributes:
+      label: 正確な型番
+      description: 任意。PSP-2001、PSP-3004 など、本体に記載されている型番です。
+      placeholder: PSP-2000、または分かりません
+    validations:
+      required: false
+
+  - type: input
+    id: firmware
+    attributes:
+      label: システムソフトウェア / カスタムファームウェア
+      description: 可能であれば両方を記入してください。
+      placeholder: 6.61 ARK-4、6.60 PRO-C2、公式 6.61、または分かりません
+    validations:
+      required: true
+
+  - type: input
+    id: pspman-version
+    attributes:
+      label: PSPMAN のバージョン
+      description: PSPMAN の About 画面で確認できます。開けない場合は「分かりません」と入力してください。
+      placeholder: About 画面に表示される Public Alpha のバージョン
+    validations:
+      required: true
+
+  - type: dropdown
+    id: problem-area
+    attributes:
+      label: どこで問題が発生しましたか？
+      options:
+        - インストール / XMB からの起動
+        - 起動 / ライブラリのスキャン / キャッシュ
+        - ライブラリの閲覧 / 並べ替え / 検索
+        - 再生開始 / 音が出ない
+        - 再生の中断 / ノイズ / 音声の異常
+        - 一時停止 / 再開 / シーク / 前へ / 次へ
+        - キュー / プレイリスト / お気に入り
+        - ジャケット画像 / カバーの読み込み
+        - カセット表示 / その他のビジュアル
+        - 操作 / 画面のナビゲーション
+        - 動作が遅い / 反応が遅れる
+        - PSPMAN の終了 / XMB へ戻る
+        - その他
+        - 分かりません
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 何が起きましたか？
+      description: 画面に表示されたこと、聞こえたこと、動かなかったことを普通の言葉で説明してください。
+      placeholder: PSPMAN は正常に起動しました。曲を選ぶとジャケットが表示され、その後...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 本来どうなると予想していましたか？
+      description: 任意。PSPMAN に期待していた動作を記入してください。
+      placeholder: 次の曲が再生されると思っていました。
+    validations:
+      required: false
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 問題が起きるまでの手順
+      description: 覚えている範囲で構いません。再現できなくても報告できます。
+      placeholder: |
+        1. PSPMAN を起動
+        2. All Songs を開く
+        3. ... を選択
+        4. ... ボタンを押す
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: どのくらいの頻度で発生しますか？
+      options:
+        - 毎回
+        - ほとんど毎回
+        - ときどき
+        - 1 回だけ
+        - 再現できませんでした
+        - 分かりません
+    validations:
+      required: true
+
+  - type: dropdown
+    id: playback-result
+    attributes:
+      label: 曲の再生はどうなりましたか？
+      description: インストールや画面操作の問題など、再生と関係がない場合は「該当しません」を選択してください。
+      options:
+        - 正常に再生された
+        - 再生が始まらなかった
+        - 再生が始まった後に停止した
+        - 再生は続いたが、別の問題が起きた
+        - ノイズ、音切れ、または音声の異常があった
+        - 音が出なかった
+        - 該当しません
+        - 分かりません
+    validations:
+      required: true
+
+  - type: dropdown
+    id: cover-result
+    attributes:
+      label: ジャケット画像はどうなりましたか？
+      description: 画像と関係がない場合は「該当しません」を選択してください。
+      options:
+        - 正常に表示された
+        - 表示されなかった
+        - 表示が遅かった
+        - 間違った画像、または壊れた表示になった
+        - 該当しません
+        - 分かりません
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ### 診断ログ
+
+        ファイル名は **`PSPMAN-HW-DIAG.log`** です。メモリースティックをパソコンで開き、最上位（ルート）を確認してください。ログは **`PSP`** フォルダーの中ではなく、その横にあります。
+
+        **PSPMAN をもう一度起動する前にログをコピーしてください。次回起動時に前のログは上書きされます。**
+
+        報告は公開されます。ログには曲名、ファイル名、パスなどが含まれる場合があるため、アップロード前に内容を確認してください。
+
+  - type: dropdown
+    id: log-status
+    attributes:
+      label: 診断ログの状態
+      options:
+        - 下に PSPMAN-HW-DIAG.log を添付しました
+        - 見つけましたが公開したくありません
+        - 見つけられませんでした
+        - PSPMAN がログを作成しませんでした
+        - もう一度起動したため上書きされました
+        - この問題には関係ありません
+        - 分かりません
+    validations:
+      required: true
+
+  - type: upload
+    id: diagnostic-log
+    attributes:
+      label: PSPMAN-HW-DIAG.log を添付
+      description: 強く推奨しますが必須ではありません。.log ファイルだけを添付し、音楽やメモリースティック全体はアップロードしないでください。
+    validations:
+      required: false
+      accept: ".log,.txt"
+
+  - type: textarea
+    id: affected-file
+    attributes:
+      label: 問題が起きた曲 / ジャケット画像の情報
+      description: 任意。音楽ファイル自体はアップロードしないでください。分かる項目だけで構いません。
+      placeholder: |
+        アーティスト名 / 曲名:
+        FLAC ファイルのサイズ:
+        サンプルレート / ビット深度 / チャンネル数:
+        画像形式:
+        画像のピクセル寸法:
+        埋め込み画像のファイルサイズ:
+    validations:
+      required: false
+
+  - type: upload
+    id: media
+    attributes:
+      label: 写真、スクリーンショット、短い動画
+      description: 任意。エラーを説明しにくい場合は PSP の画面を撮影した写真が役立ちます。
+    validations:
+      required: false
+      accept: ".png,.jpg,.jpeg,.gif,.webp,.mp4,.mov,.webm"
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: その他の情報
+      description: 任意。同じファイルが別のプレーヤーで再生できるかなど、役立ちそうな情報を記入してください。
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: public-confirmation
+    attributes:
+      label: 公開に関する確認
+      options:
+        - label: この報告と添付ファイルが公開されることを理解しています。
+          required: true
+        - label: 添付したファイルを確認し、公開したくない情報を削除しました。
+          required: true
+        - label: 著作権で保護された音楽ファイルをアップロードしていません。
+          required: true
