@@ -166,6 +166,32 @@ Not sure
   assert.ok(!labels.includes("model: PSP-1000"));
 });
 
+test("preserves the form type when a reporter removes the title prefix", () => {
+  const body = `### PSP model
+
+PSP-2000
+
+### Where did the problem happen?
+
+Startup, library scan, or cache
+
+### Diagnostic log status
+
+Not sure
+`;
+  const labels = classifyIssue(
+    issue({
+      title: "PSPMAN freezes while scanning",
+      body,
+      labels: ["type: bug", "status: needs triage"],
+    })
+  );
+
+  assert.ok(labels.includes("type: bug"));
+  assert.ok(labels.includes("area: startup"));
+  assert.ok(labels.includes("model: PSP-2000"));
+});
+
 test("plain mentions of the log do not count as later attachments", () => {
   assert.equal(
     hasUploadedLogInComment("Please attach `PSPMAN-HW-DIAG.log` when possible."),
