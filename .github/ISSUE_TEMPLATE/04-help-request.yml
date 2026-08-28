@@ -1,5 +1,5 @@
 name: Ask for help
-description: Use this when you are stuck or are not sure whether something is a PSPMAN bug.
+description: Stuck, or not sure whether something is a bug? Start here.
 title: "[Help] "
 labels:
   - "type: help"
@@ -8,9 +8,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        This is the easiest form when you are not sure what is wrong.
+        Not sure whether it is a bug? Use this form.
 
-        Explain what you are trying to do in your own words. You may write **“I don't know”** for technical details.
+        Tell us what you are trying to do and where it goes wrong. If you do not know your firmware or PSPMAN version, leave it blank.
 
   - type: textarea
     id: goal
@@ -24,7 +24,7 @@ body:
     id: stuck
     attributes:
       label: Where are you stuck?
-      description: Include any message shown by the PSP.
+      description: Include any message shown on the PSP.
       placeholder: Tell us what you see and what happens when you try.
     validations:
       required: true
@@ -65,7 +65,7 @@ body:
     id: media
     attributes:
       label: Photo or screenshot
-      description: Optional. A clear photo of the PSP screen is often the quickest way to explain the problem.
+      description: Optional. A phone photo of the PSP screen is fine.
     validations:
       required: false
       accept: ".png,.jpg,.jpeg,.gif,.webp"
@@ -82,9 +82,9 @@ body:
   - type: checkboxes
     id: public-confirmation
     attributes:
-      label: Public report confirmation
+      label: Before submitting
       options:
-        - label: I understand that this request and any files I attach are public.
+        - label: I understand that this issue and its attachments are public.
           required: true
         - label: I did not upload copyrighted music or private information.
           required: true
