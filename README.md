@@ -1,63 +1,50 @@
-# PSPMAN Support and Issue Tracker
+# PSPMAN Issue Tracker
 
-This is the public support and issue tracker for **PSPMAN**, a Walkman-inspired FLAC music player for Sony PSP.
+Bug reports, compatibility tests, help, and feature ideas for **PSPMAN**.
 
-PSPMAN's application source and internal engineering repository are private. This repository exists so anyone can report a problem, share a compatibility result, ask for help, or suggest an improvement.
+PSPMAN's source is private for now. Use this repo for public reports and testing feedback.
 
-## Start here
+## Report something
 
-You do not need technical experience. Choose the option that sounds closest to what you need and write **“I don't know”** wherever you are unsure.
-
-| What do you need? | Open this form |
+| What do you need? | Form |
 | --- | --- |
-| PSPMAN crashed, froze, behaved incorrectly, or would not play something | [Report a PSPMAN problem](https://github.com/obsoletesony/PSPMAN-Issues/issues/new?template=01-bug-report.yml) |
+| PSPMAN crashed, froze, misbehaved, or would not play something | [Report a PSPMAN bug](https://github.com/obsoletesony/PSPMAN-Issues/issues/new?template=01-bug-report.yml) |
 | 日本語で不具合を報告したい | [日本語の不具合報告フォーム](https://github.com/obsoletesony/PSPMAN-Issues/issues/new?template=02-bug-report-ja.yml) |
-| You tested a PSP model or firmware and want to share whether it works | [Share a compatibility result](https://github.com/obsoletesony/PSPMAN-Issues/issues/new?template=03-compatibility-report.yml) |
-| You are stuck or are not sure whether something is a bug | [Ask for help](https://github.com/obsoletesony/PSPMAN-Issues/issues/new?template=04-help-request.yml) |
+| You tested a PSP model or firmware and want to share the result | [Share a compatibility result](https://github.com/obsoletesony/PSPMAN-Issues/issues/new?template=03-compatibility-report.yml) |
+| You are stuck or not sure whether something is a bug | [Ask for help](https://github.com/obsoletesony/PSPMAN-Issues/issues/new?template=04-help-request.yml) |
 | You have an idea for PSPMAN | [Suggest an improvement](https://github.com/obsoletesony/PSPMAN-Issues/issues/new?template=05-feature-request.yml) |
 
-A free GitHub account is required to submit a report.
+Don't know your exact PSP model, firmware, or PSPMAN version? Use **Not sure** or write **“I don't know.”**
 
-## The diagnostic log
+A free GitHub account is required to submit an issue.
 
-PSPMAN Public Alpha records diagnostic information **locally** on your Memory Stick. Nothing is uploaded or sent to ObsoleteSony automatically.
+## Diagnostic log
 
-The file is named:
+The Public Alpha writes a local diagnostic log to your Memory Stick. Nothing is uploaded automatically.
 
 `PSPMAN-HW-DIAG.log`
 
-Open the Memory Stick on a computer and look at its top level, also called the **root**. The log appears beside the `PSP` folder, not inside it.
+Open the Memory Stick on a computer and look at the root. The log is next to the `PSP` folder, not inside it.
 
-**Copy the log before starting PSPMAN again. Each launch replaces the previous log.**
+**Copy the log before opening PSPMAN again. The next launch replaces it.**
 
-Attaching the log is strongly recommended because it often shows what PSPMAN was doing immediately before the problem. A report without a log is still welcome.
+Attach it when you can. It is especially useful for crashes, playback problems, and hardware-specific bugs. No log? Submit the report anyway.
 
-## Public reports and privacy
+## Before uploading anything
 
-Everything posted in this repository, including attachments, is public.
+GitHub issues and attachments in this repo are public. Check the log before uploading it; it can contain song names, file names, and paths.
 
-Before uploading a diagnostic log, quickly review it for information you do not want to publish. A log may contain song names, file names, or paths from your library.
+Do not upload music files, a full Memory Stick dump, passwords, account details, or anything else you do not want public.
 
-Please do not upload:
+For a file-specific bug, keep the affected file unchanged. Converting it or replacing its metadata or cover can make the problem disappear.
 
-- Copyrighted music or complete music files
-- A copy of your Memory Stick
-- Passwords, account details, or other private information
-- Private source code or internal development material
+Confirmed bugs are tracked internally.
 
-For a song-specific problem, the artist, title, file size, sample rate, bit depth, channel count, and cover details are normally enough. Keep the affected file unchanged until the report has been reviewed, because converting it or replacing its cover can remove the condition that caused the problem.
+## Links
 
-## What happens after you submit
-
-Your report will be labelled automatically so it can be sorted by PSP model, affected area, and diagnostic-log availability. A maintainer may ask for clarification or a second test.
-
-Confirmed work is tracked privately. Public issues can be referenced and closed from the private engineering repository without exposing PSPMAN's source code.
-
-## Useful links
-
-- [PSPMAN website](https://www.obsoletesony.com/pspman)
-- [Report-a-bug guide](https://www.obsoletesony.com/pspman/report-a-bug)
-- [PSPMAN User's Guide](https://www.obsoletesony.com/downloads/PSPMAN-User-Guide.pdf)
-- [All open reports](https://github.com/obsoletesony/PSPMAN-Issues/issues)
+- [PSPMAN](https://www.obsoletesony.com/pspman)
+- [Bug-report guide](https://www.obsoletesony.com/pspman/report-a-bug)
+- [User's Guide](https://www.obsoletesony.com/downloads/PSPMAN-User-Guide.pdf)
+- [Open reports](https://github.com/obsoletesony/PSPMAN-Issues/issues)
 
 PSPMAN is an independent ObsoleteSony project and is not affiliated with or endorsed by Sony.
