@@ -1,15 +1,9 @@
-# Community conduct
+# Community rules
 
-The PSPMAN issue tracker should be useful to testers of every experience level.
+Keep the tracker useful.
 
-Please:
+Be patient with beginners, stay on the issue being discussed, and ask for missing information without giving people a hard time.
 
-- Be patient with people who do not know technical terminology
-- Focus on the behavior being reported, not the person reporting it
-- Ask for clarification without ridicule
-- Keep comments relevant to reproducing, understanding, or resolving the issue
-- Respect privacy and copyright
+No harassment, personal attacks, discriminatory language, spam, deliberate disruption, or posting someone else's private information.
 
-Harassment, personal attacks, discriminatory language, deliberate disruption, and publishing another person's private information are not acceptable.
-
-ObsoleteSony may edit, hide, lock, or remove material that makes the tracker unsafe or unusable, and may restrict participation when necessary.
+ObsoleteSony may remove or lock content and restrict participation when needed.
