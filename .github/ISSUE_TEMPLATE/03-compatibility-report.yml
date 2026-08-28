@@ -1,5 +1,5 @@
 name: Share a compatibility result
-description: Tell us whether PSPMAN works on a specific PSP model and firmware, even when nothing is broken.
+description: Tested PSPMAN on a PSP or firmware combo? Add the result here.
 title: "[Compatibility] "
 labels:
   - "type: compatibility"
@@ -8,9 +8,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        Compatibility reports help us understand which PSP models and firmware combinations have been tested.
+        Tested PSPMAN on a PSP or firmware combo? Add the result here.
 
-        Positive results are useful too. You do not need to test every feature.
+        Successful tests matter too. You do not need to test everything.
 
   - type: dropdown
     id: psp-model
@@ -49,7 +49,7 @@ body:
     id: pspman-version
     attributes:
       label: PSPMAN version
-      description: Use the version shown in PSPMAN's About screen.
+      description: Shown in About.
       placeholder: Public Alpha version
     validations:
       required: true
@@ -73,7 +73,7 @@ body:
     id: tested-areas
     attributes:
       label: What did you test?
-      description: Select every area you tested.
+      description: Select everything you tried.
       multiple: true
       options:
         - Installation and XMB launch
@@ -97,7 +97,7 @@ body:
     id: notes
     attributes:
       label: Result details
-      description: Briefly describe what worked and anything unusual you noticed.
+      description: What worked? Anything odd?
       placeholder: PSPMAN launched, found 215 tracks, played several FLAC files, and returned to the XMB normally.
     validations:
       required: true
@@ -106,7 +106,7 @@ body:
     id: library-size
     attributes:
       label: Approximate library size
-      description: Optional. Number of tracks and approximate storage used.
+      description: Optional. Track count and rough storage used.
       placeholder: 215 tracks, about 12 GB
     validations:
       required: false
@@ -128,7 +128,7 @@ body:
     id: diagnostic-log
     attributes:
       label: Attach PSPMAN-HW-DIAG.log
-      description: Optional. Reports and attachments are public, so review the log before uploading it.
+      description: Optional. Check the log before uploading it; the issue is public.
     validations:
       required: false
       accept: ".log,.txt"
@@ -136,8 +136,8 @@ body:
   - type: upload
     id: media
     attributes:
-      label: Optional photo or video
-      description: A photo of PSPMAN running on the device can help document the result.
+      label: Photo or video
+      description: Optional. A photo of PSPMAN running on the PSP is enough.
     validations:
       required: false
       accept: ".png,.jpg,.jpeg,.gif,.webp,.mp4,.mov,.webm"
@@ -145,9 +145,9 @@ body:
   - type: checkboxes
     id: public-confirmation
     attributes:
-      label: Public report confirmation
+      label: Before submitting
       options:
-        - label: I understand that this report and any files I attach are public.
+        - label: I understand that this issue and its attachments are public.
           required: true
         - label: I did not upload copyrighted music.
           required: true
