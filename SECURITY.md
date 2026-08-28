@@ -1,18 +1,9 @@
-# Security and privacy reports
+# Security and privacy
 
-Do not disclose a security vulnerability, private user information, or sensitive diagnostic data in a public issue.
+Do not post security vulnerabilities or sensitive data in a public issue.
 
-Send a private report to **obsoletesony@gmail.com** with the subject:
+Email **obsoletesony@gmail.com** with the subject `PSPMAN security report` and include the affected PSPMAN version, what you found, and reproduction steps if they are safe to share.
 
-`PSPMAN security report`
+Do not send music files, passwords, access tokens, or unrelated personal data.
 
-Include:
-
-- A concise description of the concern
-- The affected PSPMAN version
-- Steps to reproduce, when safe to provide
-- Your preferred contact information
-
-Do not include copyrighted music, passwords, access tokens, or unrelated personal data.
-
-Ordinary crashes, playback problems, compatibility results, and usability issues should use the public [issue forms](https://github.com/obsoletesony/PSPMAN-Issues/issues/new/choose).
+For normal crashes, playback bugs, compatibility results, and support questions, use the public [issue forms](https://github.com/obsoletesony/PSPMAN-Issues/issues/new/choose).
