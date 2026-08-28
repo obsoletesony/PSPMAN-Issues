@@ -1,5 +1,5 @@
-name: PSPMAN の問題を日本語で報告する
-description: クラッシュ、フリーズ、再生、ジャケット画像、操作などの不具合を日本語で報告します。
+name: PSPMAN の不具合を報告する
+description: クラッシュ、フリーズ、再生、ジャケット画像、操作などの不具合報告。
 title: "[不具合] "
 labels:
   - "type: bug"
@@ -9,17 +9,17 @@ body:
   - type: markdown
     attributes:
       value: |
-        PSPMAN のテストにご協力いただきありがとうございます。
+        PSPMAN のテストありがとうございます。
 
-        **専門知識は必要ありません。** 分かる範囲で入力し、不明な項目には **「分かりません」** と書いてください。
+        分かる範囲で大丈夫です。型番、CFW、バージョンなどが分からなければ **「分かりません」** と入力してください。
 
-        この報告と添付ファイルはすべて公開されます。著作権で保護された音楽ファイルはアップロードしないでください。PSPMAN が診断情報を自動送信することはありません。
+        Issue と添付ファイルは公開されます。音楽ファイルはアップロードしないでください。診断ログが自動送信されることはありません。
 
   - type: dropdown
     id: psp-model
     attributes:
       label: PSP のモデル
-      description: 正確な地域別型番が分からない場合は、シリーズだけで構いません。
+      description: 正確な型番が分からなければ、1000 / 2000 / 3000 などのシリーズだけで大丈夫です。
       options:
         - PSP-1000
         - PSP-2000
@@ -37,7 +37,7 @@ body:
     attributes:
       label: 正確な型番
       description: 任意。PSP-2001、PSP-3004 など、本体に記載されている型番です。
-      placeholder: PSP-2000、または分かりません
+      placeholder: PSP-2001、または分かりません
     validations:
       required: false
 
@@ -45,7 +45,7 @@ body:
     id: firmware
     attributes:
       label: システムソフトウェア / カスタムファームウェア
-      description: 可能であれば両方を記入してください。
+      description: 分かれば両方を入力してください。
       placeholder: 6.61 ARK-4、6.60 PRO-C2、公式 6.61、または分かりません
     validations:
       required: true
@@ -54,7 +54,7 @@ body:
     id: pspman-version
     attributes:
       label: PSPMAN のバージョン
-      description: PSPMAN の About 画面で確認できます。開けない場合は「分かりません」と入力してください。
+      description: About 画面に表示されます。PSPMAN が起動しない場合は「分かりません」で大丈夫です。
       placeholder: About 画面に表示される Public Alpha のバージョン
     validations:
       required: true
@@ -85,7 +85,7 @@ body:
     id: what-happened
     attributes:
       label: 何が起きましたか？
-      description: 画面に表示されたこと、聞こえたこと、動かなかったことを普通の言葉で説明してください。
+      description: 画面や音がどうなったか教えてください。
       placeholder: PSPMAN は正常に起動しました。曲を選ぶとジャケットが表示され、その後...
     validations:
       required: true
@@ -94,7 +94,7 @@ body:
     id: expected
     attributes:
       label: 本来どうなると予想していましたか？
-      description: 任意。PSPMAN に期待していた動作を記入してください。
+      description: 任意。
       placeholder: 次の曲が再生されると思っていました。
     validations:
       required: false
@@ -103,7 +103,7 @@ body:
     id: steps
     attributes:
       label: 問題が起きるまでの手順
-      description: 覚えている範囲で構いません。再現できなくても報告できます。
+      description: 直前に何をしたか、覚えている範囲で書いてください。一度しか起きていなくても大丈夫です。
       placeholder: |
         1. PSPMAN を起動
         2. All Songs を開く
@@ -130,7 +130,7 @@ body:
     id: playback-result
     attributes:
       label: 曲の再生はどうなりましたか？
-      description: インストールや画面操作の問題など、再生と関係がない場合は「該当しません」を選択してください。
+      description: 再生と関係がない場合は「該当しません」を選んでください。
       options:
         - 正常に再生された
         - 再生が始まらなかった
@@ -147,7 +147,7 @@ body:
     id: cover-result
     attributes:
       label: ジャケット画像はどうなりましたか？
-      description: 画像と関係がない場合は「該当しません」を選択してください。
+      description: 画像と関係がない場合は「該当しません」を選んでください。
       options:
         - 正常に表示された
         - 表示されなかった
@@ -163,11 +163,11 @@ body:
       value: |
         ### 診断ログ
 
-        ファイル名は **`PSPMAN-HW-DIAG.log`** です。メモリースティックをパソコンで開き、最上位（ルート）を確認してください。ログは **`PSP`** フォルダーの中ではなく、その横にあります。
+        **`PSPMAN-HW-DIAG.log`** はメモリースティックのルート、**`PSP`** フォルダーと同じ場所にあります。
 
-        **PSPMAN をもう一度起動する前にログをコピーしてください。次回起動時に前のログは上書きされます。**
+        **PSPMAN をもう一度起動する前にコピーしてください。次回起動で上書きされます。**
 
-        報告は公開されます。ログには曲名、ファイル名、パスなどが含まれる場合があるため、アップロード前に内容を確認してください。
+        Issue は公開されるので、アップロード前にログを確認してください。曲名、ファイル名、パスが含まれる場合があります。
 
   - type: dropdown
     id: log-status
@@ -188,7 +188,7 @@ body:
     id: diagnostic-log
     attributes:
       label: PSPMAN-HW-DIAG.log を添付
-      description: 強く推奨しますが必須ではありません。.log ファイルだけを添付し、音楽やメモリースティック全体はアップロードしないでください。
+      description: ログがあればここに添付してください。音楽ファイルやメモリースティック全体はアップロードしないでください。
     validations:
       required: false
       accept: ".log,.txt"
@@ -197,7 +197,7 @@ body:
     id: affected-file
     attributes:
       label: 問題が起きた曲 / ジャケット画像の情報
-      description: 任意。音楽ファイル自体はアップロードしないでください。分かる項目だけで構いません。
+      description: 任意。音楽ファイル自体はアップロードしないでください。
       placeholder: |
         アーティスト名 / 曲名:
         FLAC ファイルのサイズ:
@@ -212,7 +212,7 @@ body:
     id: media
     attributes:
       label: 写真、スクリーンショット、短い動画
-      description: 任意。エラーを説明しにくい場合は PSP の画面を撮影した写真が役立ちます。
+      description: 任意。PSP の画面をスマートフォンで撮った写真でも大丈夫です。
     validations:
       required: false
       accept: ".png,.jpg,.jpeg,.gif,.webp,.mp4,.mov,.webm"
@@ -221,18 +221,18 @@ body:
     id: additional-context
     attributes:
       label: その他の情報
-      description: 任意。同じファイルが別のプレーヤーで再生できるかなど、役立ちそうな情報を記入してください。
+      description: ほかに気になることがあれば書いてください。
     validations:
       required: false
 
   - type: checkboxes
     id: public-confirmation
     attributes:
-      label: 公開に関する確認
+      label: 送信前の確認
       options:
-        - label: この報告と添付ファイルが公開されることを理解しています。
+        - label: この Issue と添付ファイルが公開されることを理解しています。
           required: true
-        - label: 添付したファイルを確認し、公開したくない情報を削除しました。
+        - label: 添付ファイルに公開したくない情報がないか確認しました。
           required: true
         - label: 著作権で保護された音楽ファイルをアップロードしていません。
           required: true
