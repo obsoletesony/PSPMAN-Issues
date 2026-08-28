@@ -1,0 +1,90 @@
+name: Ask for help
+description: Use this when you are stuck or are not sure whether something is a PSPMAN bug.
+title: "[Help] "
+labels:
+  - "type: help"
+  - "status: needs triage"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is the easiest form when you are not sure what is wrong.
+
+        Explain what you are trying to do in your own words. You may write **“I don't know”** for technical details.
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: What are you trying to do?
+      placeholder: I am trying to install PSPMAN / play my music / find the diagnostic log...
+    validations:
+      required: true
+
+  - type: textarea
+    id: stuck
+    attributes:
+      label: Where are you stuck?
+      description: Include any message shown by the PSP.
+      placeholder: Tell us what you see and what happens when you try.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: psp-model
+    attributes:
+      label: PSP model
+      options:
+        - PSP-1000
+        - PSP-2000
+        - PSP-3000
+        - PSP Go (PSP-N1000)
+        - PSP Street (PSP-E1000)
+        - PPSSPP or another emulator
+        - Other
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: firmware
+    attributes:
+      label: System software or custom firmware
+      placeholder: 6.61 ARK-4, 6.60 PRO-C2, official 6.61, or I don't know
+    validations:
+      required: false
+
+  - type: input
+    id: pspman-version
+    attributes:
+      label: PSPMAN version
+      placeholder: Version shown in About, or I don't know
+    validations:
+      required: false
+
+  - type: upload
+    id: media
+    attributes:
+      label: Photo or screenshot
+      description: Optional. A clear photo of the PSP screen is often the quickest way to explain the problem.
+    validations:
+      required: false
+      accept: ".png,.jpg,.jpeg,.gif,.webp"
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you already tried?
+      description: Optional.
+      placeholder: I copied the folder again, restarted the PSP, tried another Memory Stick...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: public-confirmation
+    attributes:
+      label: Public report confirmation
+      options:
+        - label: I understand that this request and any files I attach are public.
+          required: true
+        - label: I did not upload copyrighted music or private information.
+          required: true
