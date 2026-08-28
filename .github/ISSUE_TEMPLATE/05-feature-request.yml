@@ -1,0 +1,83 @@
+name: Suggest an improvement
+description: Suggest a feature, workflow change, or usability improvement for PSPMAN.
+title: "[Idea] "
+labels:
+  - "type: feature"
+  - "status: needs triage"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Good suggestions explain the problem or use case first. A proposed implementation is welcome but not required.
+
+        This is a public tracker. Do not include private source code or confidential information.
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: What problem would this solve?
+      description: Describe the situation from a user's point of view.
+      placeholder: When I use PSPMAN as a desk player, I need to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested improvement
+      description: Explain what you would like PSPMAN to do.
+      placeholder: Add an option that...
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefit
+    attributes:
+      label: Why would this be useful?
+      description: Tell us who would benefit and how often the feature would be used.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or workarounds
+      description: Optional. Describe how you handle this today.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: psp-model
+    attributes:
+      label: PSP model
+      description: Optional context.
+      options:
+        - PSP-1000
+        - PSP-2000
+        - PSP-3000
+        - PSP Go (PSP-N1000)
+        - PSP Street (PSP-E1000)
+        - Any PSP model
+        - Other
+        - Not sure
+    validations:
+      required: false
+
+  - type: upload
+    id: mockup
+    attributes:
+      label: Optional sketch or mockup
+      description: Upload an image only when it makes the idea easier to understand.
+    validations:
+      required: false
+      accept: ".png,.jpg,.jpeg,.gif,.webp,.svg"
+
+  - type: checkboxes
+    id: public-confirmation
+    attributes:
+      label: Public suggestion confirmation
+      options:
+        - label: I understand that this suggestion and any files I attach are public.
+          required: true
+        - label: I did not include copyrighted music, private source code, or confidential information.
+          required: true
