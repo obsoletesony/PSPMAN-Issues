@@ -1,5 +1,5 @@
 name: Suggest an improvement
-description: Suggest a feature, workflow change, or usability improvement for PSPMAN.
+description: Feature idea, workflow change, or usability improvement.
 title: "[Idea] "
 labels:
   - "type: feature"
@@ -8,15 +8,15 @@ body:
   - type: markdown
     attributes:
       value: |
-        Good suggestions explain the problem or use case first. A proposed implementation is welcome but not required.
+        Tell us what you would change and why. The use case matters more than an implementation.
 
-        This is a public tracker. Do not include private source code or confidential information.
+        This repo is public. Do not include private source code or other non-public material.
 
   - type: textarea
     id: use-case
     attributes:
       label: What problem would this solve?
-      description: Describe the situation from a user's point of view.
+      description: What are you trying to do that PSPMAN does not handle well today?
       placeholder: When I use PSPMAN as a desk player, I need to...
     validations:
       required: true
@@ -25,7 +25,7 @@ body:
     id: suggestion
     attributes:
       label: Suggested improvement
-      description: Explain what you would like PSPMAN to do.
+      description: What would you change?
       placeholder: Add an option that...
     validations:
       required: true
@@ -34,7 +34,7 @@ body:
     id: benefit
     attributes:
       label: Why would this be useful?
-      description: Tell us who would benefit and how often the feature would be used.
+      description: Who would use it, and when?
     validations:
       required: true
 
@@ -42,7 +42,7 @@ body:
     id: alternatives
     attributes:
       label: Alternatives or workarounds
-      description: Optional. Describe how you handle this today.
+      description: Optional. How do you handle this now?
     validations:
       required: false
 
@@ -50,7 +50,7 @@ body:
     id: psp-model
     attributes:
       label: PSP model
-      description: Optional context.
+      description: Optional.
       options:
         - PSP-1000
         - PSP-2000
@@ -66,8 +66,8 @@ body:
   - type: upload
     id: mockup
     attributes:
-      label: Optional sketch or mockup
-      description: Upload an image only when it makes the idea easier to understand.
+      label: Sketch or mockup
+      description: Optional. Attach one if it helps explain the idea.
     validations:
       required: false
       accept: ".png,.jpg,.jpeg,.gif,.webp,.svg"
@@ -75,9 +75,9 @@ body:
   - type: checkboxes
     id: public-confirmation
     attributes:
-      label: Public suggestion confirmation
+      label: Before submitting
       options:
-        - label: I understand that this suggestion and any files I attach are public.
+        - label: I understand that this issue and its attachments are public.
           required: true
         - label: I did not include copyrighted music, private source code, or confidential information.
           required: true
