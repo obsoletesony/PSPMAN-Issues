@@ -2,72 +2,72 @@
   {
     "name": "type: bug",
     "color": "D73A4A",
-    "description": "Something in PSPMAN is not working as expected"
+    "description": "Bug report"
   },
   {
     "name": "type: compatibility",
     "color": "0E8A16",
-    "description": "Hardware, firmware, or emulator compatibility result"
+    "description": "PSP, firmware, or emulator test"
   },
   {
     "name": "type: help",
     "color": "0075CA",
-    "description": "A user needs help or is unsure whether something is a bug"
+    "description": "Support question"
   },
   {
     "name": "type: feature",
     "color": "A2EEEF",
-    "description": "Feature or usability suggestion"
+    "description": "Feature or UX idea"
   },
   {
     "name": "status: needs triage",
     "color": "FBCA04",
-    "description": "New report awaiting initial review"
+    "description": "Needs first review"
   },
   {
     "name": "status: needs information",
     "color": "D4C5F9",
-    "description": "More information is needed from the reporter"
+    "description": "Waiting for more details"
   },
   {
     "name": "status: investigating",
     "color": "BFDADC",
-    "description": "The report is being investigated"
+    "description": "Under investigation"
   },
   {
     "name": "status: confirmed",
     "color": "B60205",
-    "description": "The reported behavior has been reproduced or confirmed"
+    "description": "Reproduced or confirmed"
   },
   {
     "name": "status: fixed",
     "color": "0E8A16",
-    "description": "A fix has been completed"
+    "description": "Fixed"
   },
   {
     "name": "status: cannot reproduce",
     "color": "EDEDED",
-    "description": "The behavior could not be reproduced with current information"
+    "description": "Could not reproduce"
   },
   {
     "name": "area: startup",
     "color": "F9D0C4",
-    "description": "Installation, launch, startup scan, or cache"
+    "description": "Install, launch, scan, or cache"
   },
   {
     "name": "area: library",
     "color": "C5DEF5",
-    "description": "Library scan, browsing, sorting, or search"
+    "description": "Library, sorting, or search"
   },
   {
     "name": "area: playback",
     "color": "5319E7",
-    "description": "Audio decoding, output, transitions, or transport"
+    "description": "Playback, decoding, output, or transport"
   },
   {
     "name": "area: artwork",
     "color": "F7C6C7",
-    "description": "Album artwork or image loading"
+    "description": "Album artwork"
   },
   {
     "name": "area: queue",
@@ -77,86 +77,86 @@
   {
     "name": "area: interface",
     "color": "BFD4F2",
-    "description": "Controls, navigation, or visual presentation"
+    "description": "Controls, navigation, or visuals"
   },
   {
     "name": "area: performance",
     "color": "FEF2C0",
-    "description": "Slowdown, latency, or responsiveness"
+    "description": "Speed or responsiveness"
   },
   {
     "name": "area: shutdown",
     "color": "D4C5F9",
-    "description": "Closing PSPMAN or returning to the XMB"
+    "description": "Closing PSPMAN or returning to XMB"
   },
   {
     "name": "area: other",
     "color": "EDEDED",
-    "description": "Problem area is unknown or outside current categories"
+    "description": "Other or unknown area"
   },
   {
     "name": "model: PSP-1000",
     "color": "E99695",
-    "description": "Report involves a PSP-1000"
+    "description": "PSP-1000"
   },
   {
     "name": "model: PSP-2000",
     "color": "E99695",
-    "description": "Report involves a PSP-2000"
+    "description": "PSP-2000"
   },
   {
     "name": "model: PSP-3000",
     "color": "E99695",
-    "description": "Report involves a PSP-3000"
+    "description": "PSP-3000"
   },
   {
     "name": "model: PSP Go",
     "color": "E99695",
-    "description": "Report involves a PSP Go"
+    "description": "PSP Go"
   },
   {
     "name": "model: PSP Street",
     "color": "E99695",
-    "description": "Report involves a PSP Street"
+    "description": "PSP Street"
   },
   {
     "name": "model: emulator",
     "color": "E99695",
-    "description": "Report involves PPSSPP or another emulator"
+    "description": "PPSSPP or another emulator"
   },
   {
     "name": "model: unknown",
     "color": "EDEDED",
-    "description": "PSP model was not identified"
+    "description": "Model not identified"
   },
   {
     "name": "log: attached",
     "color": "0E8A16",
-    "description": "A diagnostic log is attached"
+    "description": "Diagnostic log attached"
   },
   {
     "name": "log: missing",
     "color": "FBCA04",
-    "description": "No diagnostic log was attached"
+    "description": "No diagnostic log attached"
   },
   {
     "name": "log: unavailable",
     "color": "D4C5F9",
-    "description": "The log could not be found, created, or preserved"
+    "description": "Log unavailable"
   },
   {
     "name": "log: private",
     "color": "C5DEF5",
-    "description": "The reporter chose not to publish the log"
+    "description": "Reporter kept the log private"
   },
   {
     "name": "log: not applicable",
     "color": "EDEDED",
-    "description": "A diagnostic log is not relevant"
+    "description": "Log not relevant"
   },
   {
     "name": "language: japanese",
     "color": "F9D0C4",
-    "description": "The report is written in Japanese"
+    "description": "Japanese report"
   }
 ]
