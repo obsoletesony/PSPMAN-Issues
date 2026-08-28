@@ -1,0 +1,153 @@
+name: Share a compatibility result
+description: Tell us whether PSPMAN works on a specific PSP model and firmware, even when nothing is broken.
+title: "[Compatibility] "
+labels:
+  - "type: compatibility"
+  - "status: needs triage"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Compatibility reports help us understand which PSP models and firmware combinations have been tested.
+
+        Positive results are useful too. You do not need to test every feature.
+
+  - type: dropdown
+    id: psp-model
+    attributes:
+      label: PSP model
+      options:
+        - PSP-1000
+        - PSP-2000
+        - PSP-3000
+        - PSP Go (PSP-N1000)
+        - PSP Street (PSP-E1000)
+        - PPSSPP or another emulator
+        - Other
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: exact-model
+    attributes:
+      label: Exact model number
+      description: Optional. For example PSP-2001 or PSP-3004.
+      placeholder: PSP-2001
+    validations:
+      required: false
+
+  - type: input
+    id: firmware
+    attributes:
+      label: System software or custom firmware
+      placeholder: 6.61 ARK-4, 6.60 PRO-C2, official 6.61, or I don't know
+    validations:
+      required: true
+
+  - type: input
+    id: pspman-version
+    attributes:
+      label: PSPMAN version
+      description: Use the version shown in PSPMAN's About screen.
+      placeholder: Public Alpha version
+    validations:
+      required: true
+
+  - type: dropdown
+    id: overall-result
+    attributes:
+      label: Overall result
+      options:
+        - Works normally
+        - Works with a minor problem
+        - Works with a serious problem
+        - Opens but cannot play music
+        - Does not open
+        - Appears as corrupted data
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tested-areas
+    attributes:
+      label: What did you test?
+      description: Select every area you tested.
+      multiple: true
+      options:
+        - Installation and XMB launch
+        - Cold startup and library scan
+        - Warm startup using the cache
+        - Library browsing
+        - FLAC playback
+        - Pause and resume
+        - Seek
+        - Previous and next
+        - Natural track advance
+        - Album artwork
+        - Queue
+        - Playlists and favorites
+        - Cassette view
+        - HOME shutdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Result details
+      description: Briefly describe what worked and anything unusual you noticed.
+      placeholder: PSPMAN launched, found 215 tracks, played several FLAC files, and returned to the XMB normally.
+    validations:
+      required: true
+
+  - type: input
+    id: library-size
+    attributes:
+      label: Approximate library size
+      description: Optional. Number of tracks and approximate storage used.
+      placeholder: 215 tracks, about 12 GB
+    validations:
+      required: false
+
+  - type: dropdown
+    id: log-status
+    attributes:
+      label: Diagnostic log
+      options:
+        - Attached below
+        - Available but not attached
+        - Could not find it
+        - Not needed because everything worked
+        - Not sure
+    validations:
+      required: true
+
+  - type: upload
+    id: diagnostic-log
+    attributes:
+      label: Attach PSPMAN-HW-DIAG.log
+      description: Optional. Reports and attachments are public, so review the log before uploading it.
+    validations:
+      required: false
+      accept: ".log,.txt"
+
+  - type: upload
+    id: media
+    attributes:
+      label: Optional photo or video
+      description: A photo of PSPMAN running on the device can help document the result.
+    validations:
+      required: false
+      accept: ".png,.jpg,.jpeg,.gif,.webp,.mp4,.mov,.webm"
+
+  - type: checkboxes
+    id: public-confirmation
+    attributes:
+      label: Public report confirmation
+      options:
+        - label: I understand that this report and any files I attach are public.
+          required: true
+        - label: I did not upload copyrighted music.
+          required: true
