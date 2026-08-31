@@ -38,7 +38,7 @@ Do not upload music files, a full Memory Stick dump, passwords, account details,
 
 For a file-specific bug, keep the affected file unchanged. Converting it or replacing its metadata or cover can make the problem disappear.
 
-Confirmed bugs are tracked internally.
+Public reports remain in this tracker. Confirmed engineering work may also be tracked internally, but the public issue will be updated with its status and any available workaround.
 
 ## Links
 
