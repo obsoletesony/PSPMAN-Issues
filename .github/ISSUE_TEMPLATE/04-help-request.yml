@@ -34,13 +34,10 @@ body:
     attributes:
       label: PSP model
       options:
-        - PSP-1000
         - PSP-2000
         - PSP-3000
         - PSP Go (PSP-N1000)
         - PSP Street (PSP-E1000)
-        - PPSSPP or another emulator
-        - Other
         - Not sure
     validations:
       required: true

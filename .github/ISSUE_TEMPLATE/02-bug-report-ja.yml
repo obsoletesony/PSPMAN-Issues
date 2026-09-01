@@ -19,15 +19,12 @@ body:
     id: psp-model
     attributes:
       label: PSP のモデル
-      description: 正確な型番が分からなければ、1000 / 2000 / 3000 などのシリーズだけで大丈夫です。
+      description: 正確な型番が分からなければ、2000 / 3000 などのシリーズだけで大丈夫です。
       options:
-        - PSP-1000
         - PSP-2000
         - PSP-3000
         - PSP Go (PSP-N1000)
         - PSP Street (PSP-E1000)
-        - PPSSPP またはその他のエミュレーター
-        - その他
         - 分かりません
     validations:
       required: true
