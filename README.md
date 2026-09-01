@@ -13,6 +13,7 @@ PSPMAN's source is private for now. Use this repo for public reports and testing
 | You tested a PSP model or firmware and want to share the result | [Share a compatibility result](https://github.com/obsoletesony/PSPMAN-Issues/issues/new?template=03-compatibility-report.yml) |
 | You are stuck or not sure whether something is a bug | [Ask for help](https://github.com/obsoletesony/PSPMAN-Issues/issues/new?template=04-help-request.yml) |
 | You have an idea for PSPMAN | [Suggest an improvement](https://github.com/obsoletesony/PSPMAN-Issues/issues/new?template=05-feature-request.yml) |
+| You need to report a security or privacy concern privately | [Read the security policy](https://github.com/obsoletesony/PSPMAN-Issues/security/policy) |
 
 Don't know your exact PSP model, firmware, or PSPMAN version? Use **Not sure** or write **“I don't know.”**
 
