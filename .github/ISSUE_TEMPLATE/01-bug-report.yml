@@ -14,12 +14,15 @@ body:
 
         Issues and attachments are public. Do not upload music files. PSPMAN does not send diagnostic data anywhere by itself.
 
+        PSP-1000 reports are welcome, but the model remains experimental and is not officially supported.
+
   - type: dropdown
     id: psp-model
     attributes:
       label: PSP model
       description: The model family is enough if you do not know the full regional number.
       options:
+        - PSP-1000 (experimental / unsupported)
         - PSP-2000
         - PSP-3000
         - PSP Go (PSP-N1000)
