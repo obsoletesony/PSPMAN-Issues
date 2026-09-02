@@ -12,11 +12,14 @@ body:
 
         Successful tests matter too. You do not need to test everything.
 
+        PSP-1000 results are welcome, but the model remains experimental and is not officially supported.
+
   - type: dropdown
     id: psp-model
     attributes:
       label: PSP model
       options:
+        - PSP-1000 (experimental / unsupported)
         - PSP-2000
         - PSP-3000
         - PSP Go (PSP-N1000)
@@ -125,7 +128,7 @@ body:
     id: diagnostic-log
     attributes:
       label: Attach PSPMAN-HW-DIAG.log
-      description: Optional. Check the log before uploading it; the issue is public.
+      description: Optional. The issue is public, and the log may contain song names, file names, or paths. Review it before uploading, or submit without it.
     validations:
       required: false
       accept: ".log,.txt"
@@ -145,6 +148,8 @@ body:
       label: Before submitting
       options:
         - label: I understand that this issue and its attachments are public.
+          required: true
+        - label: I checked anything I attached for information I do not want public.
           required: true
         - label: I did not upload copyrighted music.
           required: true
