@@ -158,5 +158,20 @@
     "name": "language: japanese",
     "color": "F9D0C4",
     "description": "Japanese report"
+  },
+  {
+    "name": "status: reviewed",
+    "color": "6E7781",
+    "description": "Initial review completed"
+  },
+  {
+    "name": "target: Alpha 4",
+    "color": "1D76DB",
+    "description": "Planned for Alpha 4"
+  },
+  {
+    "name": "target: Alpha 5",
+    "color": "5319E7",
+    "description": "Planned for Alpha 5"
   }
 ]
