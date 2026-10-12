@@ -1,0 +1,105 @@
+name: Report a PSPMAN issue / 問題を報告
+description: Tell us what happened. English or Japanese. / 英語・日本語で報告できます。
+title: '[Bug] '
+body:
+- type: markdown
+  attributes:
+    value: 'Tell us what happened. English and Japanese are welcome. Fill in what you know; “I don’t know” is fine.
+
+
+      問題の内容を英語または日本語で教えてください。分からない項目は「分かりません」で大丈夫です。
+
+
+      Reports and attachments are public. Do not upload music or private information. / 報告と添付ファイルは公開されます。音楽や個人情報は添付しないでください。'
+- type: dropdown
+  id: psp-model
+  attributes:
+    label: PSP model
+    description: The model family is enough if you do not know the full regional number. 本体の機種。分からない場合は Not sure
+      を選んでください。
+    options:
+    - PSP-1000 (experimental / unsupported)
+    - PSP-2000
+    - PSP-3000
+    - PSP Go (PSP-N1000)
+    - PSP Street (PSP-E1000)
+    - Not sure
+  validations:
+    required: true
+- type: input
+  id: firmware
+  attributes:
+    label: System software or custom firmware
+    description: Include both if you know them. システムソフトウェア / CFW。分かる範囲で入力してください。
+    placeholder: 6.61 ARK-4, 6.60 PRO-C2, 5.00 M33-4, official 6.61, or I don't know
+  validations:
+    required: false
+- type: input
+  id: pspman-version
+  attributes:
+    label: PSPMAN version
+    description: Shown in About. If PSPMAN will not open, write “I don't know.” アプリのバージョン。分かる範囲で入力してください。
+    placeholder: Public Alpha version shown in About
+  validations:
+    required: false
+- type: textarea
+  id: what-happened
+  attributes:
+    label: What happened?
+    description: What did you see or hear? 何が起きましたか？ 期待した動作と実際の動作を教えてください。
+    placeholder: PSPMAN opened normally. I selected a song, the cover appeared, and then...
+  validations:
+    required: true
+- type: textarea
+  id: steps
+  attributes:
+    label: Steps to reproduce
+    description: What did you do right before it happened? If it only happened once, list what you remember. 再現手順。繰り返し起きるかどうかも教えてください。
+    placeholder: '1. Opened PSPMAN
+
+      2. Opened All Songs
+
+      3. Selected ...
+
+      4. Pressed ...
+
+      '
+  validations:
+    required: false
+- type: markdown
+  attributes:
+    value: '### Diagnostic log
+
+
+      Look for **`PSPMAN-HW-DIAG.log`** in the root of the Memory Stick, next to the **`PSP`** folder.
+
+
+      **Copy it before opening PSPMAN again. The next launch replaces it.**
+
+
+      The issue is public, so check the log before uploading it. It can contain song names, file names, and paths.
+
+      '
+- type: upload
+  id: diagnostic-log
+  attributes:
+    label: Attach PSPMAN-HW-DIAG.log
+    description: If you have it, attach the .log here. Do not upload music or the whole Memory Stick. 診断ログがあれば添付してください。なくても報告できます。
+  validations:
+    required: false
+    accept: .log,.txt
+- type: upload
+  id: media
+  attributes:
+    label: Photo, screenshot, or short video
+    description: Optional. A phone photo of the PSP screen is fine. 写真や短い動画があれば添付してください。
+  validations:
+    required: false
+    accept: .png,.jpg,.jpeg,.gif,.webp,.mp4,.mov,.webm
+- type: checkboxes
+  id: public-confirmation
+  attributes:
+    label: Before submitting / 送信前の確認
+    options:
+    - label: I checked attachments for private information and did not upload music. / 添付ファイルに個人情報や音楽ファイルが含まれていないことを確認しました。
+      required: true
